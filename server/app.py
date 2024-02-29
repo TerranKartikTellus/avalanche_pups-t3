@@ -17,7 +17,7 @@ redis_client = redis.StrictRedis(host='redis', port=6379, decode_responses=True)
 #     database="your_database"
 # )
 # postgres_cursor = postgres_conn.cursor()
-
+ec2 = 'http://13.201.95.217'
 @app.route("/predict", methods=['GET'])
 def predict():
     boot = int(request.args.get('b'))
@@ -31,7 +31,7 @@ def predict():
         # If data not found in cache, query PostgreSQL or call worker
         # Placeholder for calling worker or querying PostgreSQL
         # Assuming worker is running on port 5001
-        worker_response = requests.get(f"http://worker:5001/predict?b={boot}&h={harness}").json()
+        worker_response = requests.get(f"http://{ec2}:5001/predict?b={boot}&h={harness}").json()
         # Store response in Redis cache
         redis_client.hmset(cache_key, worker_response)
         print('Got Data on Redis')
@@ -42,4 +42,4 @@ def home():
     return jsonify('server')
     
 if __name__ == "__main__":
-    app.run(debug=True, host='server', port=5000)
+    app.run(debug=True, host=ec2, port=5000)

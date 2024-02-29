@@ -11,6 +11,7 @@ CORS(app)
 # Connect to Redis
 redis_client = redis.StrictRedis(host='redis', port=6379, decode_responses=True)
 
+ec2 = 'http://13.201.95.217'
 
 def create_postgres_database():
     # Connect to default 'postgres' database
@@ -152,4 +153,4 @@ def predict():
         return jsonify({'flag': flag, 'message': message})
     
 if __name__ == "__main__":
-    app.run(host='worker', port=5001, debug=True)
+    app.run(host=ec2, port=5001, debug=True)
