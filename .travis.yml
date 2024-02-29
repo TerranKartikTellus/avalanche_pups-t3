@@ -3,7 +3,8 @@ language: generic
 
 services:
   - docker
-
+  - postgresql
+  - redis
 before_install:
   - docker build -t terrankartiktellus/avalanche_pups_client -f ./client/Dockerfile ./client
   - docker build -t terrankartiktellus/avalanche_pups_server -f ./server/Dockerfile ./server
@@ -15,4 +16,3 @@ after_success:
   - docker push -t terrankartiktellus/avalanche_pups_client
   - docker push -t terrankartiktellus/avalanche_pups_server
   - docker push -t terrankartiktellus/avalanche_pups_worker
-  

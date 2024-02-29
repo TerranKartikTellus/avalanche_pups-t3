@@ -69,13 +69,11 @@ def create_predictions_table():
                 )
             """)
             print("Table 'predictions' created successfully")
-
+            
+            conn.close()
     except Exception as e:
         print("Error creating table:", e)
 
-    finally:
-        if conn:
-            conn.close()
 
 # Call the function to create the 'predictions' table
 create_predictions_table()
