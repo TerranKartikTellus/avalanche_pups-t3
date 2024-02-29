@@ -68,10 +68,11 @@ toast.error("No cached data available.", { duration: 3000 });
 
     // Start updating the toast message
     const interval = setInterval(updateToastMessage, 1000);
+    let ec2 = 'http://13.201.95.217'
 
     if (!toggleOrder.toggle) {
         try {
-            const response = await fetch(`http://${process.env.ec2}:5000/predict?b=${data.b}&h=${data.h}`);
+            const response = await fetch(`http://${ec2}:5000/predict?b=${data.b}&h=${data.h}`);
 
             clearInterval(interval); // Stop updating the toast message
 
