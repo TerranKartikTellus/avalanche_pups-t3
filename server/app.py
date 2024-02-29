@@ -31,7 +31,7 @@ def predict():
         # If data not found in cache, query PostgreSQL or call worker
         # Placeholder for calling worker or querying PostgreSQL
         # Assuming worker is running on port 5001
-        worker_response = requests.get(f"http://{ec2}:5001/predict?b={boot}&h={harness}").json()
+        worker_response = requests.get(f"{ec2}:5001/predict?b={boot}&h={harness}").json()
         # Store response in Redis cache
         redis_client.hmset(cache_key, worker_response)
         print('Got Data on Redis')
