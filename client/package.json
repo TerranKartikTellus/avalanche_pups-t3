@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "proxy": "http://localhost:5000",
+
   "dependencies": {
     "axios": "^1.2.2",
     "eslint": "8.31.0",
