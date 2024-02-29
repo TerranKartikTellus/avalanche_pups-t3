@@ -2,6 +2,7 @@ import Image from "next/image";
 import python from "/public/img/py.png"
 import flask from "/public/img/flask.png"
 import diag1 from "/public/img/diag1.jpg"
+import Link from "next/link";
 
 
 export default function AboutAI(){
@@ -50,7 +51,7 @@ export default function AboutAI(){
 
             <div className="w-full pr-10">
                     <div className="px-32 text-justify tracking-wider mt-5 text-c">Used to listen on <strong>API End-points</strong> so that Frontend can request backend Python which then uses Machine Learning Model to Calculates whether the customer has chosen a pair of doggy boots that 
-    are a sensible size. This works by estimating the dog's actual boot 
+    are a sensible size. This works by estimating the dog&quot;s actual boot 
     size from their harness size. This returns a message for the customer that should be shown before
     they complete their payment 
 
@@ -77,7 +78,7 @@ export default function AboutAI(){
 
           <div className="flex flex-row items-center justify-center my-10">
             <div className="w-1/2 flex flex-row items-center justify-center text-5xl">Step 3</div>
-            <div className="w-1/2  capitalize text-2xl">Create Client used 'GET' method to call API endpoint and Show Prediction</div>
+            <div className="w-1/2  capitalize text-2xl">Create Client used &quot;GET&quot; method to call API endpoint and Show Prediction</div>
           </div>
 
     </div>
@@ -113,8 +114,8 @@ function Model(){
 
 function DevelopedBy(){
   return(
-    <a href="https://www.linkedin.com/in/terrankartiktellus/" target="_blank" className='text-gray-50  font-thin ml-5  hover:underline rounded-3xl block'>
+    <Link href="https://www.linkedin.com/in/terrankartiktellus/" target="_blank" className='text-gray-50  font-thin ml-5  hover:underline rounded-3xl block'>
       Developed By TKT
-    </a>
+    </Link>
   );
 }

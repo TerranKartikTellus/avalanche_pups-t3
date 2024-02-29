@@ -1,9 +1,9 @@
 FROM python:3.10-slim
 WORKDIR /app/server
-COPY . /app/server
-
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+COPY . .
 
+EXPOSE 5000
 CMD ["python", "app.py"]

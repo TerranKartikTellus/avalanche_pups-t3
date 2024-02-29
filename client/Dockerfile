@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:alpine
 WORKDIR /app/client
 COPY package*.json ./
-RUN npm install
-
+RUN npm install --production
 COPY . .
+RUN npm run build
 EXPOSE 3000
-CMD ["npm", "run","dev"]
+CMD ["npm", "run", "start"]
