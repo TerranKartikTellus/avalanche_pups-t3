@@ -88,18 +88,22 @@ toast.dismiss();
                 toast.success(result.message, { duration: 10000 , delay: 1000,style: { width: "700px" ,  textAlign: "justify" }});
                 setOrder({ toggle: true, button: "Order Now" });
             } else if (result.flag == 1) {
+                toast.dismiss();
                 toast.error(result.message, { duration: 10000,style: { width: "700px" ,  textAlign: "justify" } });
             } else if (result.flag == -1) {
+                toast.dismiss();
                 toast.error(result.message, { duration: 10000,style: { width: "700px" ,  textAlign: "justify" } });
             }
             console.log("res", result);
 
         } catch (err) {
             console.log(err);
+
+            toast.dismiss();
             toast.error("Backend Error", { duration: 3000 });
-              toast.dismiss();
         }
     } else {
+        toast.dismiss();
         toast.success("Order Placed", { duration: 10000 });
         setOrderCount(1);
         setOrder({ toggle: false, button: "Check Availability" });
