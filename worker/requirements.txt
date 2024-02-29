@@ -1,0 +1,7 @@
+flask
+flask-cors
+redis
+psycopg2-binary
+joblib
+statsmodels
+pandas==2.2.1

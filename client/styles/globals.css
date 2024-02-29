@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  opacity: 0.5;
+  width: 1px;
+  scrollbar-width: 1px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+
+
+  background: transparent;
+  opacity: 0.5;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6d8ab1;
+  opacity: 0.5;
+  width: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6d8ab1;
+  opacity: 0.5;
+}

@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  redis:
+    image: 'redis:latest'
+    # ports:
+    #   - "6380:6380"  # Map Redis to port 6380 on host
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5433:5432"  # Map PostgreSQL to port 5433 on host
+    environment:
+      POSTGRES_PASSWORD: postgres_password
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app/client
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+      - postgres
+
+  worker:
+    build: ./worker
+    ports:
+      - "5001:5001"
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres_password
+      - POSTGRES_DB=predictions
