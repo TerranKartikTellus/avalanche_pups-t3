@@ -15,3 +15,4 @@ after_success:
   - docker push -t terrankartiktellus/avalanche_pups_client
   - docker push -t terrankartiktellus/avalanche_pups_server
   - docker push -t terrankartiktellus/avalanche_pups_worker
+  

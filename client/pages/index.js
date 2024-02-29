@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google"
+import { Inter } from "next/font/google"
 import Image from "next/image"
 import snow from "../public/img/snow.jpg"
 import logo from "../public/img/logo1.jpg"
