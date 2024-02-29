@@ -18,7 +18,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      ec2 : http://13.201.95.217/
+      ec2 : http://13.201.95.217
 
   server:
     build: ./server
