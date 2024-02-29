@@ -49,18 +49,22 @@ async function Submit(e){
     let timeElapsed = 0; // Initialize the time elapsed
     let loadingToastShown = false; // Initialize flag to track if loading toast is shown
 let cacheToast = true;
+let initialMsg = 'Waiting for response'
     // Create a function to update the toast message with the current time elapsed
     const updateToastMessage = () => {
         if (!loadingToastShown) {
-toast.loading(`Waiting for response - ${timeElapsed} seconds`, { duration: 1000, position: 'top-right' });
+          toast.dismiss();
+toast.loading(`${initialMsg} \n ${timeElapsed} seconds`, { duration: 12000, position: 'top-right',style: { width: '700px' ,  textAlign: 'center' } });
         }
         timeElapsed++; // Increment the time elapsed
 
         // If the time elapsed exceeds the threshold and no response is received yet, show "No Cache was found" notification
         if (timeElapsed >= 5 && cacheToast && !loadingToastShown) {
-toast.error('No cached data available. Loading model and predicting...', { duration: 2300 });
+toast.error('No cached data available.', { duration: 2300 });
             cacheToast = false
-        }
+            initialMsg = 'Loading model and predicting        '
+
+          }
         
     };
 
@@ -82,12 +86,12 @@ toast.error('No cached data available. Loading model and predicting...', { durat
             const result = await response.json();
 toast.dismiss();
             if (result.flag == 0) {
-                toast.success(result.message, { duration: 10000 , delay: 1000});
+                toast.success(result.message, { duration: 10000 , delay: 1000,style: { width: '700px' ,  textAlign: 'justify' }});
                 setOrder({ toggle: true, button: 'Order Now' });
             } else if (result.flag == 1) {
-                toast.error(result.message, { duration: 10000 });
+                toast.error(result.message, { duration: 10000,style: { width: '700px' ,  textAlign: 'justify' } });
             } else if (result.flag == -1) {
-                toast.error(result.message, { duration: 10000 });
+                toast.error(result.message, { duration: 10000,style: { width: '700px' ,  textAlign: 'justify' } });
             }
             console.log('res', result);
 
