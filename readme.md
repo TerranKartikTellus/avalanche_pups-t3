@@ -2,6 +2,7 @@
 
 ## Introduction
 Avalanche Pups is a cutting-edge platform designed to cater to the unique needs of avalanche dog owners. Our platform leverages advanced technologies, including Redis caching and PostgreSQL persistence, to provide users with a seamless and efficient experience.
+![Video Presentation](https://drive.google.com/file/d/1J3QwQTS_ZvVM8uMOzRGO0vSglc9uSJnv/view?usp=sharing "Video Presentation")
 
 ![Avalanche Pups](https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/logo1.jpg "Avalanche Pups")
 
