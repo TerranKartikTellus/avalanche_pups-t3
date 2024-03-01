@@ -99,7 +99,9 @@ toast.dismiss();
               toast.dismiss();
         }
     } else {
+
         toast.success("Order Placed", { duration: 10000 });
+      toast.dismiss();
         setOrderCount(1);
         setOrder({ toggle: false, button: "Check Availability" });
         setDate({ b: 0, h: 0 });

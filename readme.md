@@ -25,3 +25,16 @@ In addition to Redis caching, Avalanche Pups relies on PostgreSQL for persistent
 
 ## Conclusion
 By leveraging Redis caching and PostgreSQL persistence, Avalanche Pups delivers a superior user experience characterized by fast response times, efficient resource utilization, and robust data integrity
+
+![Select Harness with Correct Boot size and harness size in cm]( https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/perfect1.PNG "Correct Boot size and harness size pair")
+
+![Select Harness with Correct Boot size and harness size in cm]( https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/perfect2.PNG "Correct Boot size and harness size pair")
+
+![Select Harness with Correct Boot size and harness size in cm]( https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/perfect3.PNG "Correct Boot size and harness size pair")
+
+![Select Harness with Correct Boot size and harness size in cm]( https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/suggest.PNG "Correct Boot size and harness size pair")
+
+![Select Harness with Correct Boot size and harness size in cm]( https://github.com/TerranKartikTellus/Machine-Learning/blob/main/Intro%20to%20ML/avalanche/public/img/backend.PNG "Correct Boot size and harness size pair")
+
+
+

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import python from "/public/img/py.png"
 import flask from "/public/img/flask.png"
-import diag1 from "/public/img/diag1.jpg"
+import diag1 from "/public/arch.jpg"
 import Link from "next/link";
 
 
@@ -21,13 +21,13 @@ export default function AboutAI(){
           </div> */}
 
           <div className="w-2/3 mb-20">
-            <div className="w-full mx-auto">        <Image src={diag1} className="invert" alt="Python" ></Image></div>
+            <div className="w-full mx-auto">        <Image src={diag1} className="rounded-3xl mt-5" alt="Python" ></Image></div>
           </div>
 
       </div>
           
 
-          <div  className="w-full grid grid-cols-3 mb-20">
+          {/* <div  className="w-full grid grid-cols-3 mb-20">
             <div className="w-full">
               <div className="text-2xl">Javascript-NextJS/ReactJS</div>
               <div>FrontEnd</div>
@@ -79,7 +79,7 @@ export default function AboutAI(){
           <div className="flex flex-row items-center justify-center my-10">
             <div className="w-1/2 flex flex-row items-center justify-center text-5xl">Step 3</div>
             <div className="w-1/2  capitalize text-2xl">Create Client used &quot;GET&quot; method to call API endpoint and Show Prediction</div>
-          </div>
+          </div> */}
 
     </div>
   );
