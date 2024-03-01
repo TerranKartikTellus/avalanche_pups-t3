@@ -50,7 +50,7 @@ export default function AboutAI(){
             </div>
 
             <div className="w-full pr-10">
-                    <div className="px-32 text-justify tracking-wider mt-5 text-c">Used to listen on <strong>API End-points</strong> so that Frontend can request backend Python which then uses Machine Learning Model to Calculates whether the customer has chosen a pair of doggy boots that 
+                    <div className="px- text-justify tracking-wider mt-5 text-c">Used to listen on <strong>API End-points</strong> so that Frontend can request backend Python which then uses Machine Learning Model to Calculates whether the customer has chosen a pair of doggy boots that 
     are a sensible size. This works by estimating the dog&quot;s actual boot 
     size from their harness size. This returns a message for the customer that should be shown before
     they complete their payment 
@@ -59,7 +59,7 @@ export default function AboutAI(){
             </div>
 
             <div className="w-full">
-              <div className="px-32 text-justify tracking-wider mt-5 text-c">
+              <div className="px- text-justify tracking-wider mt-5 text-c">
 
               The ordinary least squares (OLS) method is a linear regression technique that is used to estimate the unknown parameters in a model. The method relies on minimizing the sum of squared residuals between the actual and predicted values.
               </div>
