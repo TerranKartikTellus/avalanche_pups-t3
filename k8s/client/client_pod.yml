@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod
+  labels:
+    object_label: web
+spec:
+  containers:
+    - name: client
+      image:  terrankartiktellus/avalanche_pups_worker
+      ports:
+      - containerPort: 3000
