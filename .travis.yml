@@ -12,7 +12,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --username --password-stdin
   # Take those images and push them to docker hub
-  - docker push -t terrankartiktellus/avalanche_pups_client
-  - docker push -t terrankartiktellus/avalanche_pups_server
-  - docker push -t terrankartiktellus/avalanche_pups_worker
+  - docker push  terrankartiktellus/avalanche_pups_client
+  - docker push  terrankartiktellus/avalanche_pups_server
+  - docker push  terrankartiktellus/avalanche_pups_worker
   
