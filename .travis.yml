@@ -9,10 +9,9 @@ before_install:
   - docker build -t terrankartiktellus/avalanche_pups_server -f ./server/Dockerfile ./server
   - docker build -t terrankartiktellus/avalanche_pups_worker -f ./worker/Dockerfile ./worker
 after_success:
-  # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --username --password-stdin
-  # Take those images and push them to docker hub
+  - travis env set DOCKER_USERNAME DOCKER_ID
+  - travis env set DOCKER_PASSWORD DOCKER_PASSWORD
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push  terrankartiktellus/avalanche_pups_client
   - docker push  terrankartiktellus/avalanche_pups_server
   - docker push  terrankartiktellus/avalanche_pups_worker
-  
